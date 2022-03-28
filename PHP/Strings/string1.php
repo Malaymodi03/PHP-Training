@@ -327,7 +327,333 @@
         //stripslashes(string)
         //removes backslashes from string added by addslashes
         echo "<br><br>stripslashes(string)<br>";
-        echo stripslashes("Who\'s Peter Griffin?");
+        echo stripslashes("Who\'s Toyam Sharma?");
+
+        //stripos(string,find,start)
+        //find position of first occurence of string inside another string
+        //this function is case-insenstive
+        echo "<br><br>stripos(string,find)<br>";
+        echo stripos("pizza, burger,sandwich,pizza, dhosa, pizza,dabeli","PIZZA");
+
+        //strpos(string,find,start)
+        //find position of first occurence of string inside another string 
+        //this function is case sensitive
+        echo "<br><br>strpos(string,find)<br>";
+        echo strpos("pizza, burger,sandwich,PIZZA, dhosa, pizza,dabeli","PIZZA");
+
+        //strripos(string,find,start)
+        //find position of last occurence of string inside another string 
+        //This function is case-insensitive
+        echo "<br><br>strripos(string,find)<br>";
+        echo strripos("pizza, burger,sandwich,PIZZA, dhosa, pizza,dabeli","PIZZA");
+
+        //strrpos(string,find,start)
+        //find position of last occurence of string inside another string 
+        //this function is case-sensitive
+        echo "<br><br>strrpos(string,find)<br>";
+        echo strrpos("pizza, burger,sandwich,PIZZA, dhosa, pizza,dabeli","PIZZA");
+
+        //stristr(string,search,before_search)
+        //find first occurence of string inside another string and returns rest of string
+        echo "<br><br>stristr(string,search)<br>";
+        echo stristr("pizza is my favourite food","favourite");
+
+        //strlen(string)
+        //find length of string
+        echo "<br><br>strlen(string)<br>";
+        echo strlen("i want to visit kerala");
+
+        //strnatcasecmp(str1,str2)
+        //compares two strings in natural sorting algorithm
+        //returns -1 if str1 is less than str2, 0 if both are equal and 1 if str1 is greater than
+        //str2
+        //case-insensitive
+        echo "<br><br>strnatcasecmp<br>"; 
+        echo strnatcasecmp("2good morning!","10good morning!");
+        echo "<br>";
+        echo strnatcasecmp("10good morning!","2good morning!");
+
+        //strnatcmp(str1,str2)
+        //similar to strnatcasecmp
+        //case sensitive
+        echo "<br><br>strnatcmp(str1,str2)<br>";
+        echo strnatcasecmp("2good morning!","10good morning!");
+        echo "<br>";
+        echo strnatcasecmp("10good morning!","2good morning!");
+
+        //strpbrk(string,charlist)
+        //This function searches a string for any specified characters and returns the string from the
+        //first occurence of the specified characters
+        echo "<br><br>strpbrk(string,charlist)<br>";
+        echo strpbrk("i want to visit kerala","vt");
+
+        //strrchr(string,char)
+        //This function finds the position of the last occurrence of a string within another
+        // string, and returns all characters from this position to the end of the string.
+        echo "<br><br> strrchr(string,char)<br>";
+        echo strrchr("i want to visit kerala and visit goa","visit");
+
+        //strrev(string)
+        //this function reverses a string
+        echo "<br><br> strrchr(string,char)<br>";
+        echo strrev("jaipur is pink city of india");
+
+        //strspn(string,charlist,start)
+        //this function returns number of characters found in string which was given in parameter
+        //list
+        echo "<br><br> strspn(string,charlist,start)<br>";
+        echo strspn("jaipur is pink city of india","city","15");
+
+        //strstr(string,search,before_search)
+        //find first occurence of string inside another string and returns rest of string
+        //case-sensitive
+        echo "<br><br>strstr(string,search)<br>";
+        echo strstr("pizza is my favourite food","favourite");
+
+        //strtok(string,split)
+        //this function splits the string into tokens
+        //when calling this function first time string argument is passed
+        //rest all time only the split argument is needed
+        echo "<br><br>strtok(string,split)<br>";
+        $string = "jaipur is pink city of india.";
+        $token = strtok($string, " ");
+
+        while ($token !== false)
+        {
+        echo "$token<br>";
+        $token = strtok(" ");
+        }
+
+        //strtolower(string) & strtoupper(string)
+        //This functions converts a string to lower case and uppercase
+        echo "<br><br>strtolower(string)<br>";
+        $str="i want to visit kerala";
+        echo "normal string <br>$str";
+        echo "<br>uppercase string<br>";
+        echo strtoupper($str);
+        echo "<br>lower case string<br>";
+        echo strtolower($str);
+
+        //ucfirst(string)
+        //converts first character of string to upper case
+        echo "<br><br>ucfirst(string)<br>";
+        echo ucfirst("jaipur is known as pink city of india");
+
+        //ucwords(string)
+        //converts first character of each word of string to upper case
+        echo "<br><br>ucwords(string)<br>";
+        echo ucwords("jaipur is known as pink city of india");
+
+        //strncasecmp(string1,string2,length)
+        //This function compares two strings according to first n characters given in parameters
+        //returns negative value if str1 is less than str2, zero if both are equal and positive if str1 is greater than str2
+        //this function is case insensitive
+        echo "<br><br>strncasecmp(string1,string2,length)<br>";
+        echo strncasecmp("Good Morning!","Good Evening!",5);
+
+        //vprintf(atream,format,argarray)
+        //This function writes a formatted string to a specified output stream
+        echo "<br><br>vfprintf()<br>";
+        $number = 60;  
+        $str = "class";  
+        $file = fopen("test.txt","w");  
+        echo vfprintf($file,"There are %u students in my  %s.",array($number,$str)); 
+
+        //vprintf(format,argarray)
+        //This function outputs a formatted string
+        echo "<br><br>vprintf()<br>";
+        $number = 60;
+        $str="class";
+        vprintf("There are %u students in my  %s.",array($number,$str)); 
+
+        //vsprintf(format,argarray)
+        //This function writes a fromatted string to a variable.
+        echo "<br><br>vsprintf()<br>";
+        $number = 60;
+        $str="class";
+        $vp = vsprintf("There are %u students in my  %s.",array($number,$str));
+        echo $vp; 
+
+        
+        //wordwrap(string,width,break,cut)
+        //This function wraps string into new line when specific limit is reached.
+        echo "<br><br>wordwrap()<br>";
+        $str = "An example of a long word is: Honorificabilitudinitatibus";
+        echo wordwrap($str,10,"<br>\n");
+
+        //hebrev(string, max_chars_per_line);
+        //function reverses the flow of Hebrew text from its native right-to-left to a left-to-right.
+        echo "<br><br>hebrev()<br>";
+        echo hebrev("שלום עולם");
+  
+        //hebrevc()
+        //Reverse the display of Hebrew characters, and convert new lines(\n) into <br>:
+        echo "<br><br>hebrevc()<br>";
+        echo hebrevc("ב חשון התשסג\nב חשון התשסג");
+
+        //html_entity_decode(string,flags,character-set)
+        //converts html entities into characters
+        echo "<br><br>html_entity_decode()<br>";
+        $str = '&lt;a href=&quot;https://www.w3schools.com&quot;&gt;w3schools.com&lt;/a&gt;';
+        echo html_entity_decode($str);
+
+        //htmlspecialchars_decode(string,flags)
+        //converts predefined html entities to characters
+        echo "<br><br>htmlspecialchars_decode()<br>";
+        $str = "This is some &lt;b&gt;bold&lt;/b&gt; text.";
+        echo htmlspecialchars_decode($str);
+
+        //htmlspecialchars(string,flags,character-set,double_encode)
+        //converts predefined characters to html entities
+        echo "<br><br>htmlspecialchars()<br>";
+        $str = "This is some <b>bold</b> text.";
+        echo htmlspecialchars($str);
+
+        //levenshtein(string1,string2,insert,replace,delete)
+        //returns levenshtein distance between two strings
+        echo "<br><br>levenshtein()<br>";
+        echo levenshtein("Hello World","ello World");
+        echo "<br>";
+        echo levenshtein("Hello World","ello World",10,20,30);
+
+        //localeconv()
+        //returns an array containing local numeric and monetary formatting information.
+        echo "<br><br>localeconv()<br>";
+        setlocale(LC_ALL,"US");
+        $locale_info = localeconv();
+        print_r($locale_info);
+
+        //money_format(string,number)
+        //returns string formayyed as a currency string
+        echo"<br><br>money_format(string,number)<br>";
+        $number = 1234.56;
+        setlocale(LC_MONETARY,"en_US");
+        echo money_format("The price is %i", $number);
+
+        //nl_langinfo(element)
+        //returns local related specific information
+
+        //printf(format,arg1,arg2,arg++)
+        //ouputs a formatted string
+        echo"<br><br>printf()<br>";
+        $number = 1234.56;
+        setlocale(LC_MONETARY,"en_US");
+        echo money_format("The price is %i", $number);
+
+        //quoted_printable_decode(string)
+        // decodes a quoted-printable string to an 8-bit ASCII string.
+        echo"<br><br>quoted_printable_decode<br>";
+        $str = "Hello=0Aworld.";
+        echo quoted_printable_decode($str);
+        //quoted_printable_encode converts an 8-bit string to a quoted-printable string.
+
+
+        //quotemeta(string)
+        //adds backslashes in front of some predefined characters in a string
+        echo "<br><br>quotemeta<br>";
+        $str = "Hello world. (can you hear me?)";
+        echo quotemeta($str);
+
+        //setlocale(constant,location)
+        //sets locale information
+        echo setlocale(LC_ALL,"US");
+        echo "<br>";
+        echo setlocale(LC_ALL,NULL);
+
+        //sprintf()
+        //writes a formatted string to variable
+        echo"<br><br>sprintf()<br>";
+        $number = 9;
+        $str = "Beijing";
+        $txt = sprintf("There are %u million bicycles in %s.",$number,$str);
+        echo $txt;
+
+        //sscanf()
+        //converts string from one type to another
+        echo"<br><br>sscanf()<br>";
+        $str = "age:30 weight:60kg";
+        sscanf($str,"age:%d weight:%dkg",$age,$weight);
+        var_dump($age,$weight);
+
+        // str_getcsv()
+        //parses a string for fields in csv format and returns an array
+
+        //str_pad()
+        //pads a string to new length
+        echo "<br><br>str_pad<br>";
+        $str = "Hello World";
+        echo str_pad($str,20,".");
+
+        //strcoll compares two strings
+        //strcoll(string1,string2)
+
+        setlocale (LC_COLLATE, 'NL');
+        echo strcoll("Hello World!","Hello World!");
+        echo "<br>";
+
+        setlocale (LC_COLLATE, 'en_US');
+        echo strcoll("Hello World!","Hello World!");
+
+
+        //strncasecmp
+        //compares two string case insensitive
+        echo"<br><br>strncasecmp<br>";
+        echo strncasecmp("Hello world!","hello earth!",6);
+
+        //strncmp
+        //compares two strings case sensitive
+        echo"<br><br>strncmp<br>";
+        echo strncmp("Hello world!","Hello earth!",6);
+
+        //crypt()
+        //returns encoded string
+        //behaves different on different operating system
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
 
