@@ -34,7 +34,8 @@
     echo "<br><br><b>chroot()</b><br>";
 
     // Change root directory
-    //chroot("/");
+    chroot("/home/woc/malay/training");
+    echo getcwd();
 
     // Get current directory
     echo getcwd();
@@ -57,7 +58,7 @@
    //rewinddir()
    $dir = "/home/woc/malay/Training/PHP/OOP";
 
-// Open a directory, and read its contents
+   // Open a directory, and read its contents
 echo "<br><br><b>rewinddir()</b><br>";
 if (is_dir($dir)){
   if ($dh = opendir($dir)){

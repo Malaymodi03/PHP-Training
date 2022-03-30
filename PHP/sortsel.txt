@@ -1,0 +1,54 @@
+for (i = 0 ; i < n-1 ; i++)
+{
+index = i;
+for(j = i+1 ; j < n ; j++)
+{
+if(A[j] < A[index])
+index = j;
+}
+temp = A[i];
+A[i] = A[index];
+A[index] = temp;
+}
+
+procedure Selection_sort(int Arr):
+     for i=0 to length(Arr):
+     Minimum_element  = Arr[0]
+           for each unsorted element:
+                   if element < Minimum_element
+           element = New_minimum
+      swap (Minimum_element, first unsorted position)
+end Selection_sort
+
+
+insertion sort
+for (i = 1 ; i < n ; i++)
+{
+   key = A [ i ];
+   j = i - 1;
+   while(j > 0 && A [ j ] > key)
+   {
+       A [ j+1 ] = A [ j ];
+       j--;
+    }
+    A [ j+1 ] = key;
+}
+ 
+ 
+bubble sort
+Initialize n = Length of Array
+
+BubbleSort(Array, n)
+{
+    for i = 0 to n-2
+    {
+        for j = 0 to n-2
+        {
+            if Array[j] > Array[j+1]
+            {
+                swap(Array[j], Array[j+1])
+            }
+        }
+    }
+} 
+ 

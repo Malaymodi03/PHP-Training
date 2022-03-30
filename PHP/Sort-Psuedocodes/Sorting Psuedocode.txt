@@ -1,0 +1,85 @@
+=============================================================================================
+
+1) Quick Sort Algorithm Psuedocode
+
+-> Choose any element as the pivot element.
+
+-> Than select two pointer one is left pointer and other is right pointer.
+
+-> Now left pointer will increment towards right side and right pointer will increment towards right side.
+
+-> left pointer will stop when he will get element greater than pivot element and right pointer will stop when he will get element lesser than the pivot element.
+
+-> we are doing this because we want every lesser than pivot should be in left side and every element bigger than pivot on the right side and pivot in center.
+
+-> After completion of first pass all elements lesser than pivot will be on left side and all elements greater than pivot will be on right side.
+
+
+-> Now we have to apply same steps on both the sides and finally every elements will be sorted.
+
+===============================================================================================
+
+
+2) Merge Sort Algorithm Psuedocode
+
+-> Merge Sort works on the strategy of dividing the array into half parts until single elements completion
+
+-> So first we will divide the array into two equal parts.
+
+-> In case of array having odd number of elements say 9 one part will have 4 elements and other part will have 5 elements
+
+-> After dividing the array into two equal parts we will further divide the array into two equal parts of both the parts
+
+-> We will follow these steps until we get all elements in single parts
+
+-> now we will compare elements with their consecutive elements and we will Merge now elements in every steps
+
+-> we will do these until we get our full array and it will be in sorted order.
+
+
+=====================================================================================
+
+3)Selection Sort Algorithm Psuedocode
+
+-> In this Algorithm first we will find the smallest element in the array and we will swap it  with first element of the array.
+
+-> after completion of 1st pass we will again find the smallest element in the array and we  will swap it with second element of the array.
+
+-> same thing we will do after 2nd pass we will find the smallest element in array and swap it with the 3rd element of the array.
+
+-> we will do these steps n-1 times and no need to do for the lst element as it will be already in sorted order (last element will be the biggest element).
+
+=======================================================================================
+
+
+4)Insertion Sort Algorithm Psuedocode
+
+-> In this algorithm we assumes that the first element is sorted and we pick the second element
+
+-> if second element is less than first element tha swap both element.
+
+-> now pick third element and compare it with second element if it is smaller than second than swap both elements and pass pointer to next element.
+
+-> if any element is smaller than previous element than no need to swap just pass pointer ahead.
+
+-> we will follow this steps upto the last element.
+
+
+
+===========================================================================================
+
+5)Bubble Sort 
+-> This is the simplest sorting Algorithm
+
+-> In this algorithm the array is transversed form beginning to end and each and every element is compared with the other element.
+
+-> we pick first element and compare it with next element if it is bigger than next element
+   than swap it with other element or else keep as it is
+
+-> now pick 2nd element and compare it with 3rd element if 3rd element it smaller than 2nd than swap both and move to next.
+
+-> we will do same steps untill the whole array is sorted.         
+       
+
+
+
