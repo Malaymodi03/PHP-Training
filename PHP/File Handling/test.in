@@ -1,0 +1,7 @@
+[names]
+me = Robert
+you = Peter
+
+[urls]
+first = "http://www.example.com"
+second = "https://www.w3schools.com"
